@@ -1,9 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Manoj kumar Portfolio</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
 <link href="../../css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
 <link rel="stylesheet" href="css/animate.css">
@@ -15,6 +17,8 @@
 <link rel="stylesheet" href="css/flaticon.css">
 <link rel="stylesheet" href="css/icomoon.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/skill.css">
+
 <link rel="stylesheet" href="css/footer.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -171,7 +175,7 @@
 <br><br>
 <div id="page-3" class="page three">
 <h2 class="heading">Skills</h2>
-<div class="row progress-circle mb-5">
+<!-- <div class="row progress-circle mb-5">
 <div class="col-lg-4 mb-4">
 <div class="bg-white rounded-lg shadow p-4">
 <h2 class="h5 font-weight-bold text-center mb-4">Front-End Development</h2>
@@ -185,65 +189,59 @@
 </span>
 <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
 <div class="h2 font-weight-bold">55<sup class="small">%</sup></div>
-</div>
-</div>
+</div> -->
+<!-- </div> -->
 
 
-<div class="row text-center mt-4">
-<div class="col-6 border-right">
-<div class="h4 font-weight-bold mb-0"></div><span class="small text-gray"></span>
-</div>
-<div class="col-6">
-<div class="h4 font-weight-bold mb-0"></div><span class="small text-gray"></span>
-</div>
-</div>
+    <div class="wrapper">
+      <div class="card">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">Front-End Development</div>
+      </div>
+      <div class="card js">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">Data Analyst</div>
+      </div>
+      <div class="card react">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">Digital Marketing</div>
+      </div>
+    </div>
 
-</div>
-</div>
-<div class="col-lg-4 mb-4">
-<div class="bg-white rounded-lg shadow p-4">
-<h2 class="h5 font-weight-bold text-center mb-4">Data Analyst</h2>
+    <script>
+      let options = {
+        startAngle: -1.55,
+        size: 150,
+        value: 0.55,
+        fill: {gradient: ['#a445b2', '#fa4299']}
+      }
+      $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+      function(event, progress, stepValue){
+        $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+      });
+      $(".js .bar").circleProgress({
+        value: 0.60
+      });
+      $(".react .bar").circleProgress({
+        value: 0.60
+      });
+    </script>
 
-<div class="progress mx-auto" data-value='60'>
-<span class="progress-left">
-<span class="progress-bar border-primary"></span>
-</span>
-<span class="progress-right">
-<span class="progress-bar border-primary"></span>
-</span>
-<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-<div class="h2 font-weight-bold">60<sup class="small">%</sup></div>
-</div>
-</div>
+ 
 
-
-<div class="row text-center mt-4">
-<div class="col-6 border-right">
-<div class="h4 font-weight-bold mb-0"></div><span class="small text-gray"></span>
-</div>
-<div class="col-6">
-<div class="h4 font-weight-bold mb-0"></div><span class="small text-gray"></span>
-</div>
-</div>
-
-</div>
-</div>
-<div class="col-lg-4 mb-4">
-<div class="bg-white rounded-lg shadow p-4">
-<h2 class="h5 font-weight-bold text-center mb-4">Digital Marketing</h2>
-
-<div class="progress mx-auto" data-value='60'>
-<span class="progress-left">
-<span class="progress-bar border-primary"></span>
-</span>
-<span class="progress-right">
-<span class="progress-bar border-primary"></span>
-</span>
-<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-<div class="h2 font-weight-bold">60<sup class="small">%</sup></div>
-</div>
-</div>
-
+<!-- JavaScript -->
+<script src="js/skill.js"></script>
+<br>
+<h1></h1>
 
 <div class="row text-center mt-4">
 <div class="col-6 border-right">
@@ -852,6 +850,7 @@ Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728
 <script src="js/main.js"></script>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <script async="" src="../../gtag/js?id=UA-23581568-13"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -862,3 +861,9 @@ Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728
 <script defer="" src="../../beacon.min.js/v2b4487d741ca48dcbadcaf954e159fc61680799950996" integrity="sha512-D/jdE0CypeVxFadTejKGTzmwyV10c1pxZk/AqjJuZbaJwGMyNHY3q/mTPWqMUnFACfCTunhZUVcd4cV78dK1pQ==" data-cf-beacon='{"rayId":"7b4882899eb2b29d","version":"2023.3.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}' crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
+    
+                                        
+ 
